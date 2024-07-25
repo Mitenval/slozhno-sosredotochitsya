@@ -4,9 +4,115 @@
   переключая тему
 */
 
+:root .theme_dark {
+    --background: #000028;
+    --subtitles-color: var(--background);
+    --main-text-color: #ffc2e6;
+    --header-text-background: var(--accent-color);
+    --button-hover-border-color: rgba(255, 0, 112, 0.4);
+    --focus-text-color: #DB00FF;
+    --dark-theme-p-and-a-color: #F1B2CE;
+    --header-background-image: url("../images/cover-image-dark.png");
+    --corners-border-color: var(--accent-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #000028;
+        --subtitles-color: var(--background);
+        --main-text-color: #ffc2e6;
+        --header-text-background: var(--accent-color);
+        --button-hover-border-color: rgba(255, 0, 112, 0.4);
+        --focus-text-color: #DB00FF;
+        --dark-theme-p-and-a-color: #F1B2CE;
+        --header-background-image: url("../images/cover-image-dark.png");
+        --corners-border-color: var(--accent-color);
+    }
+
+    button {
+        color: var(--accent-color);
+    }
+
+    button.header__theme-menu-button_active {
+        border-color: var(--accent-color);
+    }
+
+    p,
+    a {
+        color: var(--dark-theme-p-and-a-color);
+    }
+
+    .subtitle {
+        background-color: var(--accent-color);
+    }
+
+    h2 {
+        color: var(--accent-color);
+    }
+
+    h3,
+    h4,
+    .subtitle {
+        color: var(--subtitles-color);
+    }
+
+    a {
+        text-shadow: 2px 2px var(--accent-color);
+        text-decoration: none;
+    }
+
+    .rec {
+        display: block;
+    }
+
+    button:focus-visible {
+        border-bottom-color: var(--accent-color);
+    }
+}
+
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+    /* сохраните этот селектор в приведённом виде.
+      Так стили написанные ниже будут иметь больший вес,
+      чем стили в медиазапросе предпочтений пользователя
+    */
+}
+
+.theme_dark button {
+    color: var(--accent-color);
+}
+
+.theme_dark button.header__theme-menu-button_active {
+    border-color: var(--accent-color);
+}
+
+.theme_dark p,
+.theme_dark a {
+    color: var(--dark-theme-p-and-a-color);
+}
+
+.theme_dark .subtitle {
+    background-color: var(--accent-color);
+}
+
+.theme_dark h2 {
+    color: var(--accent-color);
+}
+
+.theme_dark h3,
+.theme_dark h4,
+.theme_dark .subtitle {
+    color: var(--subtitles-color);
+}
+
+.theme_dark a {
+    text-shadow: 2px 2px var(--accent-color);
+    text-decoration: none;
+}
+
+.theme_dark .rec {
+    display: block;
+}
+
+.theme_dark button:focus-visible {
+    border-bottom-color: var(--accent-color);
 }
