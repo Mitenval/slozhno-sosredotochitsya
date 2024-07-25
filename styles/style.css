@@ -94,7 +94,7 @@ nav {
     right: 2px;
     box-shadow: 0 0 4px 2px rgba(255, 0, 112, 1);
     border-radius: 50%;
-    top: 7px
+    top: 7px;
 }
 
 section {
@@ -193,7 +193,6 @@ section {
     grid-template-rows: 260px 315px 428px;
     grid-template-columns: repeat(3, 315px);
     gap: 20px;
-
 }
 
 .arts__section {
@@ -255,7 +254,6 @@ footer {
     color: var(--focus-text-color);
     text-shadow: 2px 2px 0 var(--accent-color);
     line-height: 130px;
-
 }
 
 button {
@@ -270,7 +268,6 @@ button {
 
 @media screen and (max-width: 768px) {
     body {
-
     }
 }
 
@@ -353,7 +350,6 @@ button {
     .header-no-focus {
         line-height: 96px;
         align-self: center;
-
     }
 
     .subtitle {
@@ -406,7 +402,6 @@ button {
         margin-block-start: 40px;
     }
 
-
     .focus,
     .concentration,
     .how-to,
@@ -432,7 +427,6 @@ button {
     .how-to__articles {
         gap: 0;
         margin-block-start: 20px;
-
     }
     .arts__section {
         margin-bottom: 40px;
@@ -444,7 +438,7 @@ button {
         gap: 10px;
     }
     .arts__image {
-    grid-row: auto;
-    grid-column: auto;
+        grid-row: auto;
+        grid-column: auto;
     }
 }
