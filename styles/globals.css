@@ -7,6 +7,9 @@
 }
 
 body {
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
+  margin: 0 auto;
   font-family: "IBM Plex Mono", sans-serif;
   line-height: 23.4px;
 }
@@ -19,32 +22,6 @@ h5,
 h6,
 p {
   margin: 0;
-}
-
-h2,
-h3,
-h4,
-p {
-  font-size: var(--main-font-size);
-}
-
-h2 {
-  font-weight: var(--bold-font-weight);
-}
-
-h3 {
-  font-weight: var(--bold-font-weight);
-  background-color: var(--header-text-background);
-  margin-bottom: 10px;
-}
-h4 {
-  font-weight: var(--normal-font-weight);
-  background-color: var(--header-text-background);
-  margin-bottom: 10px;
-}
-
-p {
-  font-weight: var(--normal-font-weight);
 }
 
 ul {
@@ -60,42 +37,8 @@ picture {
 
 button,
 a {
+  color: currentColor;
   font-family: inherit;
-  font-size: var(--main-font-size);
-  line-height: 18px;
-  font-weight: var(--normal-font-weight);
-  color: var(--main-text-color);
-}
-
-a {
-  text-shadow: 2px 2px var(--header-text-background);
-  text-decoration: none;
-}
-
-a:hover {
-  border-bottom: 1px solid var(--main-text-color);
-
-}
-
-a:focus {
-  outline: 1px solid var(--main-text-color);
-}
-
-button {
-  padding: 0 13px;
-  height: 26px;
-  border: 1px solid transparent;
-}
-
-button:hover {
-  border-color: var(--button-hover-border-color);
-}
-
-button:focus,
-button:focus-visible {
-  outline: none;
-}
-
-button:focus-visible {
-  border-bottom-color: var(--main-text-color);
+  font-size: inherit;
+  line-height: inherit;
 }

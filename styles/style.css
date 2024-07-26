@@ -1,3 +1,92 @@
+h2,
+h3,
+h4,
+p {
+    font-size: var(--main-font-size);
+}
+
+h2 {
+    color: var(--subheader-color);
+    font-weight: var(--bold-font-weight);
+}
+
+h3 {
+    font-weight: var(--bold-font-weight);
+    background-color: var(--header-text-background);
+    margin-bottom: 10px;
+}
+h4 {
+    font-weight: var(--normal-font-weight);
+    background-color: var(--header-text-background);
+    margin-bottom: 10px;
+}
+
+h3,
+h4,
+.subtitle,
+.arts-section__header {
+    color: var(--subtitles-background-color);
+}
+
+p {
+    font-weight: var(--normal-font-weight);
+}
+
+button {
+    color: var(--button-color);
+}
+
+button,
+a {
+    font-family: inherit;
+    font-size: var(--main-font-size);
+    line-height: 18px;
+    font-weight: var(--normal-font-weight);
+}
+
+a {
+    text-shadow: var(--link-shadow);
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 1px solid var(--main-text-color);
+
+}
+
+a:focus,
+a:focus-visible {
+    outline: none;
+}
+
+a:focus-visible {
+    outline: 1px solid var(--main-text-color);
+}
+
+p,
+a {
+    color: var(--p-and-a-color);
+}
+
+button {
+    padding: 0 13px;
+    height: 26px;
+    border: 1px solid transparent;
+}
+
+button:hover {
+    border-color: var(--button-hover-border-color);
+}
+
+button:focus,
+button:focus-visible {
+    outline: none;
+}
+
+button:focus-visible {
+    border-bottom-color: var(--button-border-bottom-color);
+}
+
 header,
 main,
 footer {
@@ -7,17 +96,14 @@ footer {
 
 header,
 footer {
+    min-height: 668px;
     height: 100vh;
 }
 
 .page {
     background-color: var(--background);
     background-attachment: fixed;
-    min-inline-size: 375px;
-    max-inline-size: 1440px;
-    margin: 0 auto;
     color: var(--main-text-color);
-    /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
 
 header {
@@ -27,14 +113,15 @@ header {
     background-image: var(--header-background-image);
     background-position: center;
     background-size: cover;
-    position: relative;
     row-gap: 78px;
 }
 
-header:after,
-header:before,
-footer:after,
-footer:before {
+.cornered {
+    position: relative;
+}
+
+.cornered:after,
+.cornered:before {
     content: "";
     position: absolute;
     width: 25px;
@@ -43,15 +130,13 @@ footer:before {
     border-color: var(--corners-border-color);
 }
 
-header:after,
-footer:after {
+.cornered:after {
     top: var(--header-corners-offset);
     right: var(--header-corners-offset);
     border-width: 1px 1px 0 0;
 }
 
-header:before,
-footer:before {
+.cornered:before {
     left: var(--header-corners-offset);
     bottom: var(--header-corners-offset);
     border-width: 0 0 1px 1px;
@@ -68,7 +153,7 @@ nav {
 }
 
 .rec {
-    display: none;
+    display: var(--rec-display-mode);
     position: absolute;
     top: 20px;
     right: 27px;
@@ -108,7 +193,9 @@ section {
     margin-bottom: 11px;
 }
 
-.concentration {
+
+.section-with-articles {
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr 2fr;
 }
 
@@ -122,20 +209,9 @@ section {
     gap: 20px;
 }
 
-.focus {
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 2fr;
-    margin-bottom: 80px;
-}
-
 .focus__articles {
     display: grid;
     gap: 20px;
-}
-
-.how-to {
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 2fr;
 }
 
 .how-to__articles {
@@ -189,8 +265,13 @@ section {
     gap: 20px;
 }
 
-.arts__section {
+.arts-section {
     margin-bottom: 64px;
+}
+
+.arts-section__header {
+    background-color: var(--header-text-background);
+    margin-bottom: 10px;
 }
 
 img {
@@ -257,7 +338,7 @@ button {
 
 .header__theme-menu-button_active {
     pointer-events: none;
-    border: 1px solid var(--main-text-color);
+    border: 1px solid var(--button-border-color);
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -306,7 +387,7 @@ button {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .arts__section {
+    .arts-section {
         gap: 10px;
         margin-bottom: 61px;
     }
@@ -375,9 +456,15 @@ button {
         margin: 0;
     }
 
+    .section-with-articles {
+        grid-template-columns: auto;
+    }
+
     section {
-        margin-top: 40px;
+        margin-block-start: 40px;
         gap: 0;
+        padding: 0 10px;
+        margin-bottom: 50px;
     }
 
     article {
@@ -386,18 +473,6 @@ button {
 
     .focus__articles {
         gap: 0;
-    }
-    .focus {
-        margin-block-start: 40px;
-    }
-
-    .focus,
-    .concentration,
-    .how-to,
-    .arts__section {
-        grid-template-columns: auto;
-        padding: 0 10px;
-        margin-bottom: 50px;
     }
 
     .concentration__articles,
@@ -417,7 +492,7 @@ button {
         gap: 0;
         margin-block-start: 20px;
     }
-    .arts__section {
+    .arts-section {
         margin-bottom: 40px;
     }
 

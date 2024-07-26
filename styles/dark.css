@@ -9,11 +9,18 @@
     --subtitles-color: var(--background);
     --main-text-color: #ffc2e6;
     --header-text-background: var(--accent-color);
+    --button-color: var(--accent-color);
+    --button-border-color: var(--accent-color);
     --button-hover-border-color: rgba(255, 0, 112, 0.4);
     --focus-text-color: #db00ff;
-    --dark-theme-p-and-a-color: #f1b2ce;
     --header-background-image: url("../images/cover-image-dark.png");
     --corners-border-color: var(--accent-color);
+    --p-and-a-color: #f1b2ce;
+    --subheader-color: var(--accent-color);
+    --subtitles-background-color: var(--subtitles-color);
+    --link-shadow: 2px 2px var(--accent-color);
+    --button-border-bottom-color: var(--accent-color);
+    --rec-display-mode: block;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,97 +29,17 @@
         --subtitles-color: var(--background);
         --main-text-color: #ffc2e6;
         --header-text-background: var(--accent-color);
+        --button-color: var(--accent-color);
+        --button-border-color: var(--accent-color);
         --button-hover-border-color: rgba(255, 0, 112, 0.4);
         --focus-text-color: #db00ff;
-        --dark-theme-p-and-a-color: #f1b2ce;
         --header-background-image: url("../images/cover-image-dark.png");
         --corners-border-color: var(--accent-color);
+        --p-and-a-color: #f1b2ce;
+        --subheader-color: var(--accent-color);
+        --subtitles-background-color: var(--subtitles-color);
+        --link-shadow: 2px 2px var(--accent-color);
+        --button-border-bottom-color: var(--accent-color);
+        --rec-display-mode: block;
     }
-
-    button {
-        color: var(--accent-color);
-    }
-
-    button.header__theme-menu-button_active {
-        border-color: var(--accent-color);
-    }
-
-    p,
-    a {
-        color: var(--dark-theme-p-and-a-color);
-    }
-
-    .subtitle {
-        background-color: var(--accent-color);
-    }
-
-    h2 {
-        color: var(--accent-color);
-    }
-
-    h3,
-    h4,
-    .subtitle {
-        color: var(--subtitles-color);
-    }
-
-    a {
-        text-shadow: 2px 2px var(--accent-color);
-        text-decoration: none;
-    }
-
-    .rec {
-        display: block;
-    }
-
-    button:focus-visible {
-        border-bottom-color: var(--accent-color);
-    }
-}
-
-.page.theme_dark {
-    /* сохраните этот селектор в приведённом виде.
-        Так стили написанные ниже будут иметь больший вес,
-        чем стили в медиазапросе предпочтений пользователя
-      */
-}
-
-.theme_dark button {
-    color: var(--accent-color);
-}
-
-.theme_dark button.header__theme-menu-button_active {
-    border-color: var(--accent-color);
-}
-
-.theme_dark p,
-.theme_dark a {
-    color: var(--dark-theme-p-and-a-color);
-}
-
-.theme_dark .subtitle {
-    background-color: var(--accent-color);
-}
-
-.theme_dark h2 {
-    color: var(--accent-color);
-}
-
-.theme_dark h3,
-.theme_dark h4,
-.theme_dark .subtitle {
-    color: var(--subtitles-color);
-}
-
-.theme_dark a {
-    text-shadow: 2px 2px var(--accent-color);
-    text-decoration: none;
-}
-
-.theme_dark .rec {
-    display: block;
-}
-
-.theme_dark button:focus-visible {
-    border-bottom-color: var(--accent-color);
 }

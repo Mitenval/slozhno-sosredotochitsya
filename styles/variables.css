@@ -10,11 +10,19 @@
     --site-width: 1024px;
     --background: #fff1f7;
     --main-text-color: #353430;
+    --button-color: var(--main-text-color);
     --accent-color: #ff0070;
     --header-text-background: #FF8DCB;
     --focus-text-color: #FFC2E6;
+    --button-border-color: var(--main-text-color);
     --button-hover-border-color: rgba(50, 49, 45, 0.4);
     --header-background-image: url("../images/cover-image-light.png");
     --corners-border-color: var(--main-text-color);
+    --p-and-a-color: var(--main-text-color);
+    --subheader-color: var(--main-text-color);
+    --subtitles-background-color: var(--main-text-color);
+    --link-shadow: 2px 2px var(--header-text-background);
+    --button-border-bottom-color: var(--main-text-color);
+    --rec-display-mode: none;
 }
 
