@@ -69,6 +69,8 @@ a {
 }
 
 button {
+    background-color: transparent;
+    text-transform: lowercase;
     padding: 0 13px;
     height: 26px;
     border: 1px solid transparent;
@@ -329,11 +331,6 @@ footer {
     color: var(--focus-text-color);
     text-shadow: 2px 2px 0 var(--accent-color);
     line-height: 130px;
-}
-
-button {
-    background-color: transparent;
-    text-transform: lowercase;
 }
 
 .header__theme-menu-button_active {
