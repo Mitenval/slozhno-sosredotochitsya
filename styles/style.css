@@ -33,6 +33,11 @@ p {
 }
 
 button {
+    background-color: transparent;
+    text-transform: lowercase;
+    padding: 0 13px;
+    height: 26px;
+    border: 1px solid transparent;
     color: var(--button-color);
 }
 
@@ -66,14 +71,6 @@ a:focus-visible {
 p,
 a {
     color: var(--p-and-a-color);
-}
-
-button {
-    background-color: transparent;
-    text-transform: lowercase;
-    padding: 0 13px;
-    height: 26px;
-    border: 1px solid transparent;
 }
 
 button:hover {
